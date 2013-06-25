@@ -18,20 +18,32 @@
         android:text="Append Fragment" />
 
     <ScrollView
+        android:id="@+id/scrollView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/btnAppendFragment" >
+        android:layout_below="@+id/btnAppendFragment"
+        android:layout_marginTop="15dp" >
 
         <LinearLayout
             android:id="@+id/llContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:orientation="vertical" >
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/txtCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAppendFragment"
+        android:layout_alignBottom="@+id/btnAppendFragment"
+        android:layout_alignLeft="@+id/scrollView1"
+        android:layout_marginLeft="15dp"
+        android:text="20"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

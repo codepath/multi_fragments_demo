@@ -5,15 +5,18 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {
 	
 	int fragmentCount = 0;
+	TextView txtCount;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);		
+		setContentView(R.layout.activity_main);
+		txtCount = (TextView) findViewById(R.id.txtCount);
 		appendFragment();
 		appendFragment();
 		appendFragment();  
@@ -25,6 +28,7 @@ public class MainActivity extends FragmentActivity {
 	
 	public void appendFragment() {
 		fragmentCount++;
+		txtCount.setText(String.valueOf(fragmentCount));
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		ft.add(R.id.llContainer, DemoFragment.newInstance(fragmentCount));
 		ft.commit();
