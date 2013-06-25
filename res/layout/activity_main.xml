@@ -12,23 +12,26 @@
         android:id="@+id/btnAppendFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="appendFragment"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:onClick="appendFragment"
         android:text="Append Fragment" />
 
-    <LinearLayout
-        android:id="@+id/llContainer"
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/btnAppendFragment"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical" >
+        android:layout_below="@+id/btnAppendFragment" >
 
-
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

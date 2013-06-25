@@ -16,7 +16,7 @@ public class MainActivity extends FragmentActivity {
 		setContentView(R.layout.activity_main);		
 		appendFragment();
 		appendFragment();
-		appendFragment(); 
+		appendFragment();  
 	}
 	
 	public void appendFragment(View v) {
